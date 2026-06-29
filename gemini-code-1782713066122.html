@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADNOC Abu Dhabi Marathon 2026 - Fan Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkPremium: '#020813',
+                        darkCard: '#0b132b',
+                        adnocBlue: '#002B49',
+                        adnocTeal: '#00A3A1',
+                        adnocCyan: '#00E5FF',
+                        adnocNeon: '#00FFCC'
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        display: ['Syncopate', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkPremium text-white font-sans antialiased selection:bg-adnocCyan selection:text-darkPremium">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="bg-darkPremium/90 backdrop-blur-md border-b border-white/5 sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Brand Anchor -->
+            <div class="flex items-center space-x-3">
+                <img src="https://www.adnocabudhabimarathon.com/wp-content/uploads/2024/01/adnoc_marathon_logo.png" 
+                     alt="ADNOC Abu Dhabi Marathon Logo" 
+                     class="h-14 w-auto object-contain brightness-110">
+                <div class="h-6 w-[1px] bg-white/10 hidden sm:block"></div>
+                <span class="text-[10px] tracking-widest font-bold text-slate-400 uppercase hidden sm:block">Fan Base 2026</span>
+            </div>
+            
+            <!-- Context Badge -->
+            <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-xs font-medium tracking-wide text-slate-300">
+                RACE DAY: <span class="text-adnocCyan font-bold">12 DEC 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PREMIUM FULL-BLEED HERO HERO BLOCK -->
+    <section class="relative h-[55vh] min-h-[420px] flex items-center justify-center overflow-hidden border-b border-white/5">
+        <!-- Background Img Stack -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-darkPremium via-darkPremium/60 to-darkPremium/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-darkPremium via-transparent to-darkPremium z-10"></div>
+            <img src="https://adsc.gov.ae/media/wwgbzmpo/am-2215.jpg?width=420&amp;height=280&format=webp&quality=75" 
+                 alt="Abu Dhabi Marathon Course" 
+                 class="w-full h-full object-cover scale-105 transform contrast-[110%] brightness-[75%] mix-blend-luminosity">
+        </div>
+        
+        <!-- Typography Layer -->
+        <div class="max-w-4xl mx-auto text-center px-6 relative z-20">
+            <span class="text-adnocCyan text-xs font-bold uppercase tracking-[0.3em] mb-3 inline-block">ADNOC Abu Dhabi Marathon Hub</span>
+            <h1 class="font-display text-3xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-white font-black italic leading-none mb-6">
+                The Ultimate <br class="sm:hidden"><span class="text-transparent bg-clip-text bg-gradient-to-r from-adnocCyan to-adnocTeal">Marathon Playlist</span>
+            </h1>
+            <p class="text-sm sm:text-base font-light text-slate-400 max-w-xl mx-auto leading-relaxed mb-8">
+                Lock in your high-cadence sonic strategy. Nominate your top power anthems, leave field notes on the inspiration board, and enter the post-race luxury recovery prize draw.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#playlist-section" class="bg-gradient-to-r from-adnocCyan to-adnocTeal text-darkPremium px-6 py-3 rounded-lg font-bold uppercase tracking-wider text-xs transition-all hover:opacity-90 shadow-lg shadow-adnocCyan/10">Configure Tracks</a>
+                <a href="#wall-section" class="bg-white/5 border border-white/10 hover:bg-white/10 text-white px-6 py-3 rounded-lg font-bold uppercase tracking-wider text-xs transition-all">The Runner's Wall</a>
+                <a href="#competition-section" class="bg-white text-darkPremium hover:bg-slate-100 px-6 py-3 rounded-lg font-bold uppercase tracking-wider text-xs transition-all">Win Recovery Access</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE INTERACTIVE UTILITIES LINKED ROW -->
+    <main class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- COMPONENT 1: NOMINATION ENGINE -->
+        <div id="playlist-section" class="lg:col-span-7 bg-darkCard border border-white/5 rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between">
+            <div>
+                <div class="p-6 border-b border-white/5 bg-gradient-to-r from-darkCard to-darkPremium">
+                    <h3 class="text-lg font-bold uppercase tracking-tight flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-adnocNeon animate-ping"></span>
+                        Community Hydration Anthems
+                    </h3>
+                    <p class="text-xs text-slate-400 mt-1">Crowdsourced beats voted to break barriers past KM 30.</p>
+                </div>
+
+                <!-- Fast Add Form -->
+                <form id="playlistForm" onsubmit="addTrack(event)" class="p-6 bg-darkPremium/50 border-b border-white/5 grid grid-cols-1 md:grid-cols-3 gap-3 items-end">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1.5">Song Title</label>
+                        <input type="text" id="songTitle" required placeholder="e.g., Lose Yourself" class="w-full text-xs p-3 bg-darkCard border border-white/10 rounded-lg text-white placeholder-slate-600 focus:outline-none focus:border-adnocCyan transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1.5">Artist name</label>
+                        <input type="text" id="songArtist" required placeholder="e.g., Eminem" class="w-full text-xs p-3 bg-darkCard border border-white/10 rounded-lg text-white placeholder-slate-600 focus:outline-none focus:border-adnocCyan transition-all">
+                    </div>
+                    <button type="submit" class="w-full bg-white text-darkPremium hover:bg-adnocCyan font-bold text-xs uppercase py-3.5 rounded-lg transition-all tracking-wider">
+                        Nominate Track
+                    </button>
+                </form>
+
+                <!-- Scrollable Track Node Stream -->
+                <div class="p-6">
+                    <div id="playlistContainer" class="space-y-2.5 max-h-[380px] overflow-y-auto pr-2">
+                        <!-- Dynamic Injection Elements -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-4 bg-darkPremium/30 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                <span>Vetted live across community runners</span>
+                <span class="text-adnocCyan flex items-center gap-1"><i class="fa-solid fa-bolt text-[10px]"></i> Live Tracking Matrix</span>
+            </div>
+        </div>
+
+        <!-- COMPONENT 2: POST RACE COMPETITION BLOCK -->
+        <div id="competition-section" class="lg:col-span-5 bg-gradient-to-b from-darkCard to-darkPremium border border-white/5 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-adnocCyan/5 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <div>
+                <span class="border border-adnocCyan/30 bg-adnocCyan/10 text-adnocCyan text-[9px] font-bold uppercase px-2 py-0.5 rounded tracking-widest inline-block mb-3">CONCIERGE TIER</span>
+                <h3 class="text-xl font-bold uppercase tracking-tight mb-1">
+                    The Ultimate <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-adnocCyan to-adnocTeal">Recovery Experience</span>
+                </h3>
+                <p class="text-xs text-slate-400 mb-6 leading-relaxed">
+                    Step off the tarmac and into absolute restoration. Enter the draw to win customized compression therapy, hyperbaric restoration, and recovery spa treatments in Abu Dhabi.
+                </p>
+
+                <!-- Input Substructure -->
+                <form id="compForm" onsubmit="handleCompetitionSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Full Name</label>
+                        <input type="text" id="compName" required placeholder="Enter runner identity" class="w-full text-xs p-3 bg-darkPremium/80 border border-white/10 rounded-lg text-white placeholder-slate-600 focus:outline-none focus:border-adnocCyan transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Email Connection</label>
+                        <input type="email" id="compEmail" required placeholder="name@domain.com" class="w-full text-xs p-3 bg-darkPremium/80 border border-white/10 rounded-lg text-white placeholder-slate-600 focus:outline-none focus:border-adnocCyan transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Assigned Race Category</label>
+                        <select class="w-full text-xs p-3 bg-darkPremium border border-white/10 rounded-lg text-slate-400 focus:outline-none focus:border-adnocCyan font-medium">
+                            <option>42.2K Full Marathon Event</option>
+                            <option>10K Community Track</option>
+                            <option>5K / 2.5K Family Loop</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full mt-2 bg-gradient-to-r from-adnocCyan to-adnocTeal text-darkPremium font-bold text-xs uppercase py-3.5 rounded-lg transition-all tracking-wider hover:opacity-90">
+                        Secure Free Ticket Entry
+                    </button>
+                </form>
+
+                <!-- Post Submission Matrix -->
+                <div id="compSuccess" class="hidden text-center py-12 space-y-4">
+                    <div class="w-12 h-12 bg-adnocCyan/10 border border-adnocCyan text-adnocCyan rounded-full flex items-center justify-center text-lg mx-auto font-black shadow-lg">
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-wider text-white">Verification Connected</h4>
+                        <p class="text-[11px] text-slate-400 max-w-xs mx-auto mt-1">Your spot in the draw has been validated. Winner notified via email on race eve.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-white/5 text-[9px] text-slate-600 text-center tracking-wide">
+                Strictly limited to 1 entry configuration profile.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- COMPONENT 3: INTUATIVE INSPIRATIONAL FEED WALL -->
+    <section id="wall-section" class="bg-darkPremium border-t border-white/5 py-20 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col xl:flex-row xl:items-end justify-between mb-12 gap-8">
+                <div>
+                    <span class="text-adnocCyan text-xs font-bold uppercase tracking-[0.2em] block mb-1">Live Broadcast</span>
+                    <h3 class="text-2xl md:text-3xl font-bold uppercase tracking-tight">The Inspiration & Tactical Wall</h3>
+                    <p class="text-xs text-slate-400 mt-1 max-w-md">Drop strategies directly from experience or read mental fuel posted by competitors.</p>
+                </div>
+                
+                <!-- Embedded Drawer Input Context -->
+                <div class="bg-darkCard p-4 rounded-xl border border-white/5 w-full xl:w-auto xl:min-w-[480px] shadow-xl">
+                    <form id="wallForm" onsubmit="addWallPost(event)" class="space-y-2">
+                        <div class="grid grid-cols-2 gap-2">
+                            <input type="text" id="wallAuthor" required placeholder="Callsign" class="w-full text-xs p-2.5 bg-darkPremium border border-white/10 rounded-lg placeholder-slate-600 text-white focus:outline-none focus:border-adnocCyan">
+                            <select id="wallTag" class="w-full text-xs p-2.5 bg-darkPremium border border-white/10 rounded-lg text-slate-400 focus:outline-none focus:border-adnocCyan font-bold">
+                                <option value="Strategy">⏱️ Pace Strategy</option>
+                                <option value="Motivation">🔥 Mental Fuel</option>
+                                <option value="AbuDhabi">🏙️ Course Detail</option>
+                            </select>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="wallMessage" required maxlength="140" placeholder="Type a message... (max 140 characters)" class="w-full text-xs p-3 pb-12 bg-darkPremium border border-white/10 rounded-lg placeholder-slate-600 text-white focus:outline-none focus:border-adnocCyan">
+                            <button type="submit" class="absolute right-2 bottom-2 bg-white text-darkPremium hover:bg-adnocCyan font-bold text-[10px] uppercase px-4 py-2 rounded-md transition-all tracking-wider">
+                                Transmit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Card Node Dynamic Output Grid -->
+            <div id="wallContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Javascript Injection Point Natively -->
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIFIED SYSTEM FOOTER -->
+    <footer class="border-t border-white/5 bg-darkPremium text-slate-600 py-12 px-6 text-center text-xs">
+        <p class="font-bold text-slate-400 uppercase tracking-widest text-[9px] mb-1">ADNOC Abu Dhabi Marathon Fan Base Portal</p>
+        <p>An interactive dynamic app engineered to sync competitor focus loops.</p>
+    </footer>
+
+    <!-- INTERACTIVE APP BUSINESS RUNTIME LOGIC -->
+    <script>
+        let playlistData = [
+            { title: "Scream & Shout", artist: "will.i.am, Britney Spears", votes: 342 },
+            { title: "Remember the Name", artist: "Fort Minor", votes: 289 },
+            { title: "Wake Me Up", artist: "Avicii", votes: 211 },
+            { title: "Level Up", artist: "Ciara", votes: 194 }
+        ];
+
+        let wallPosts = [
+            { author: "Zayed R.", text: "The coastal winds near the half-marathon mark are intense. Draft closely behind pace groups to save massive internal wattage.", tag: "Strategy", date: "2m ago" },
+            { author: "Fatima Al H.", text: "When you hit the wall at KM 32, don't focus on the distance. Focus on the single next step. The training is in your blood!", tag: "Motivation", date: "42m ago" },
+            { author: "Marc_DXB", text: "The cheering crowds near the final Corniche loop completely change the game. Keep your chin up and ride the energy.", tag: "AbuDhabi", date: "2h ago" }
+        ];
+
+        function renderPlaylist() {
+            const container = document.getElementById('playlistContainer');
+            playlistData.sort((a, b) => b.votes - a.votes);
+            
+            container.innerHTML = playlistData.map((track, idx) => `
+                <div class="flex items-center justify-between p-3.5 bg-darkPremium border border-white/5 rounded-xl hover:border-white/10 transition-all">
+                    <div class="flex items-center gap-3 min-w-0">
+                        <span class="text-xs font-bold text-slate-600 w-4">${idx + 1}</span>
+                        <div class="truncate">
+                            <p class="text-xs font-bold text-white truncate">${track.title}</p>
+                            <p class="text-[10px] text-slate-500 font-medium truncate">${track.artist}</p>
+                        </div>
+                    </div>
+                    <button onclick="upvoteTrack(${idx})" class="flex items-center gap-1.5 bg-white/5 hover:bg-adnocCyan/10 border border-white/5 text-slate-400 hover:text-adnocCyan px-3 py-1.5 rounded-lg text-xs font-bold transition-all shrink-0">
+                        <i class="fa-solid fa-fire text-amber-500 text-[10px]"></i> ${track.votes}
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function addTrack(e) {
+            e.preventDefault();
+            const t = document.getElementById('songTitle');
+            const a = document.getElementById('songArtist');
+            playlistData.push({ title: t.value, artist: a.value, votes: 1 });
+            t.value = ''; a.value = '';
+            renderPlaylist();
+        }
+
+        function upvoteTrack(idx) {
+            playlistData[idx].votes++;
+            renderPlaylist();
+        }
+
+        function renderWall() {
+            const container = document.getElementById('wallContainer');
+            const tags = {
+                Motivation: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
+                Strategy: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+                AbuDhabi: 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+            };
+
+            container.innerHTML = wallPosts.map(p => `
+                <div class="bg-darkCard border border-white/5 rounded-xl p-5 flex flex-col justify-between hover:border-white/10 transition-all">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${tags[p.tag] || 'bg-slate-500/10 text-slate-400 border-slate-500/20'}">
+                                ${p.tag}
+                            </span>
+                            <span class="text-[10px] text-slate-600 font-bold">${p.date}</span>
+                        </div>
+                        <p class="text-xs text-slate-300 font-light leading-relaxed italic">
+                            "${p.text}"
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-3.5 border-t border-white/5 flex items-center gap-2">
+                        <div class="w-5 h-5 rounded bg-darkPremium border border-white/10 flex items-center justify-center text-[9px] font-bold text-adnocCyan uppercase">
+                            ${p.author.charAt(0)}
+                        </div>
+                        <span class="text-xs text-slate-400 font-bold">${p.author}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addWallPost(e) {
+            e.preventDefault();
+            const a = document.getElementById('wallAuthor');
+            const t = document.getElementById('wallTag');
+            const m = document.getElementById('wallMessage');
+
+            wallPosts.unshift({ author: a.value, text: m.value, tag: t.value, date: "Just now" });
+            a.value = ''; m.value = '';
+            renderWall();
+        }
+
+        function handleCompetitionSubmit(e) {
+            e.preventDefault();
+            document.getElementById('compForm').classList.add('hidden');
+            document.getElementById('compSuccess').classList.remove('hidden');
+        }
+
+        window.onload = function() {
+            renderPlaylist();
+            renderWall();
+        }
+    </script>
+</body>
+</html>
